@@ -16,6 +16,24 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import GridSearchCV
 
+'''
+The script implements a time-dependent Susceptible-Infected-Recovered (SIR) model for modeling the COVID-19 pandemic. 
+The main difference between a standard SIR model and this time-dependent version is that the transmission and recovery rates (beta and gamma) are allowed to vary over time, instead of being assumed constant.
+
+Here is a high-level summary of what the script does:
+
+1. Imports the necessary libraries.
+2. Defines two helper functions, `data_spilt` and `ridge`. `data_spilt` splits the provided data into training and testing sets, and `ridge` performs a grid search to find the best hyperparameters for a Ridge Regression model.
+3. It loads data of cumulative confirmed cases, cumulative recovered cases, and cumulative deaths from the COVID-19 pandemic in China. The data are used to compute the current counts of susceptible (S), infected (X), and recovered (R) individuals, as well as the rates of infection (beta) and recovery (gamma), and the basic reproduction number (R0).
+4. Prints the most recent values of beta, gamma, and R0.
+5. Performs Ridge Regression to estimate the time-varying rates beta and gamma. The hyperparameters for Ridge Regression were determined by GridSearchCV in the original implementation, but in the given script, the best hyperparameters are already provided.
+6. Plots the estimated and actual rates beta and gamma.
+7. Implements the time-dependent SIR model, with the rates beta and gamma given by the results of the Ridge Regression. The model is iterated until the number of infected individuals falls below a threshold, or a maximum number of days has been reached.
+8. Prints the projected number of confirmed cases, infected individuals, and recovered individuals for the next day, as well as the total confirmed cases at the end of the simulation and the number of turning points (days on which beta exceeded gamma).
+9. Plots the time evolution of the counts of infected and recovered individuals.
+
+This script is based on a research paper by Yi-Cheng Chen et al. titled "A Time-dependent SIR model for COVID-19 with Undetectable Infected Persons". The model aims to provide a more realistic simulation of the COVID-19 pandemic by accounting for the fact that the rates of infection and recovery can change over time.
+'''
 
 def data_spilt(data, orders, start):
     x_train = np.empty((len(data) - start - orders, orders))
