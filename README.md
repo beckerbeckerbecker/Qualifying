@@ -17,9 +17,13 @@ I.      June 9
 II.     June 16
 III.    June 23
 IV.     June 30
+
+JULY 1 SUBMISSION
+
 V.      July 7
 VI.     July 14
 VII.    July 21
 VIII.   July 28
 IX.   August 4
 X.    August 11
+XI.  August 18
