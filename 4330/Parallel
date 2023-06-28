@@ -1,0 +1,116 @@
+#Parallel version (finalproject.c):
+#Compile using -lm flag ( ex. mpicc -o fp finalproject.c -lm ), Run ( ex. mpiexec -n 10 ./fp )
+
+#Converted from C to Python from 4330/6330 Project by Andrew Becker, et al.
+
+"""  This Python script simulates the SEIR (Susceptible, Exposed, Infectious, 
+Recovered) model for the spread of a disease in a population.
+Converted from 4330 Project by Andrew Becker, et al."""
+
+import math
+import random
+
+"""**Initialize Parameters:** 
+The code first sets up some initial counts for the number of Susceptible (Scount), 
+Infected (Icount), and Recovered (Rcount) individuals in the population. 
+
+It also creates a 2D array, Population, to represent a grid of individuals in the population."
+"""
+Scount = 480
+Icount = 326
+Rcount = 194
+Population = [[0 for _ in range(100)] for _ in range(100)]
+
+"""
+initPopGrid(pop): This function initializes the Population grid. 
+For each individual in the population, it randomly assigns them a state of 
+being either Susceptible (1), Infected (2), or Recovered (3).
+"""
+
+def initPopGrid(pop):
+    global x, y
+    popRoot = math.sqrt(pop)
+    x = math.ceil(popRoot)
+    y = math.ceil(popRoot)
+    #initialize people
+    for i in range(x):
+        for j in range(y):
+            randNum = random.randint(1, 3)
+            Population[i][j] = randNum
+
+""" doWork(x, y): This function goes through the Population grid and updates the counts for the number of 
+Susceptible, Infected, and Recovered individuals based on the current states in the grid. """
+def doWork(x, y):
+    global Scount, Icount, Rcount
+    Scount = 0
+    Icount = 0
+    Rcount = 0
+    for i in range(x):
+        for j in range(y):
+            if Population[i][j] == 1:  #1 stands for Susceptible
+                Scount += 1
+            elif Population[i][j] == 2:  #2 stands for Infected
+                Icount += 1
+            else:
+                Rcount += 1  #else Recovered
+
+"""calculate(days, population): This function simulates the spread of the disease over a given number of days, 
+based on the initial counts of Susceptible, Infected, and Recovered individuals, 
+and the defined infection rate (beta) and recovery rate (gamma). 
+It prints the fraction of the population that is Susceptible, Infected, and Recovered at each day of the simulation.
+"""
+
+
+def calculate(days, population):
+    dt = 1.0  #time step in days
+    beta = 0.2  #infection rate
+    gamma = 0.07  #recovery rate
+
+    S = [0]*480
+    I = [0]*326
+    R = [0]*194
+
+    I[0] = Icount / population  #initial infective population
+    S[0] = Scount / population - I[0]  #initial susceptible population
+    R[0] = Rcount / population  #initial recovered population
+
+    #print initials
+    print("Fraction of population susceptible to infection at beginning of observation:", S[0])
+    print("Fraction of population infected at beginning of observation:", I[0])
+    print("Fraction of population recovered at beginning of observation:", R[0])
+
+    for i in range(days):
+        S[i + 1] = S[i] - beta * (S[i] * I[i]) * dt
+        I[i + 1] = I[i] + (beta * S[i] * I[i] - gamma * I[i]) * dt
+        R[i + 1] = R[i] + gamma * I[i] * dt
+
+        #print values
+        print("Fraction of population susceptible to infection at day", i, ":", S[i])
+        print("Fraction of population infected at day", i, ":", I[i])
+        print("Fraction of population recovered at day", i, ":", R[i])
+
+""" main(): This is the main function that runs the simulation. 
+It defines the total population size and the number of days for the simulation. 
+Then it initializes the Population grid, calculates the initial counts of
+Susceptible, Infected, and Recovered individuals, 
+and then runs the simulation for the given number of days."""
+
+def main():
+    population = 1000
+    days = 30
+    print("Using population size of 1000")
+    print("Over 30 days")
+
+    random.seed()
+    initPopGrid(population)
+    doWork(x, y)
+    calculate(days, population)
+
+if __name__ == '__main__':
+    main()
+'''
+Note: In the SEIR model, the 'Exposed' category often refers to individuals 
+who have been infected but are not yet infectious themselves. 
+However, in this particular simulation, there doesn't appear to be an 'Exposed' category; 
+instead, individuals are modeled as transitioning directly from 'Susceptible' to 'Infected'.
+'''
