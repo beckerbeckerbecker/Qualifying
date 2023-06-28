@@ -47,3 +47,7 @@ This function approximates the input function 'f' around 'x = 0' using the Padé
 
 This is a simple implementation and may not work for all functions or orders, and doesn't take into account issues like numerical stability. Furthermore, calculating higher order derivatives and solving systems of linear equations can be computationally intensive, so this function may be slow for large 'm' and 'n'. We would need a more sophisticated algorithm for a production-quality implementation.
 '''
+
+#Example: Consider Padé approximants for cosine functions
+
+\begin{align*} r_2 (x) &= \dfrac{1 - \frac{5}{12}\, x^2}{1 + \frac{1}{12}\, x^2} , \\ r_4 (x) &= \dfrac{1 - \frac{115}{252}\,x^2 + \frac{313}{15120}\,x^4}{1+ \frac{11}{252}\,x^2 + \frac{13}{15120}\,x^4} , \\ r_8 (x) &= \dfrac{1-\frac{260735}{545628}\,x^2 + \frac{4375409}{141863280}\,x^4 - \frac{7696415}{13108167072}\,x^6 + \frac{80737373}{23594700729600}\, x^8}{1 + \frac{12079}{545628}\, x^2 + \frac{34709}{141863280}\,x^4 + \frac{109247}{65540835360}\, x^6 + \frac{11321}{1814976979200}\, x^8} . \end{align*}
