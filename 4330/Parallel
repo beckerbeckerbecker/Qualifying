@@ -114,3 +114,102 @@ who have been infected but are not yet infectious themselves.
 However, in this particular simulation, there doesn't appear to be an 'Exposed' category; 
 instead, individuals are modeled as transitioning directly from 'Susceptible' to 'Infected'.
 '''
+
+
+'''
+Using population size of 1000
+Over 30 days
+Fraction of population susceptible to infection at beginning of observation: -0.04799999999999999
+Fraction of population infected at beginning of observation: 0.369
+Fraction of population recovered at beginning of observation: 0.334
+Fraction of population susceptible to infection at day 0 : -0.04799999999999999
+Fraction of population infected at day 0 : 0.369
+Fraction of population recovered at day 0 : 0.334
+Fraction of population susceptible to infection at day 1 : -0.044457599999999986
+Fraction of population infected at day 1 : 0.3396276
+Fraction of population recovered at day 1 : 0.35983000000000004
+Fraction of population susceptible to infection at day 2 : -0.041437794402047985
+Fraction of population infected at day 2 : 0.31283386240204797
+Fraction of population recovered at day 2 : 0.38360393200000004
+Fraction of population susceptible to infection at day 3 : -0.03884516534760506
+Fraction of population infected at day 3 : 0.28834286297946166
+Fraction of population recovered at day 3 : 0.4055023023681434
+Fraction of population susceptible to infection at day 4 : -0.036605020109757254
+Fraction of population infected at day 4 : 0.26591871733305156
+Fraction of population recovered at day 4 : 0.4256863027767057
+Fraction of population susceptible to infection at day 5 : -0.034658228110649815
+Fraction of population infected at day 5 : 0.2453576151206305
+Fraction of population recovered at day 5 : 0.44430061299001933
+Fraction of population susceptible to infection at day 6 : -0.03295749607194265
+Fraction of population infected at day 6 : 0.2264818500234792
+Fraction of population recovered at day 6 : 0.4614756460484635
+Fraction of population susceptible to infection at day 7 : -0.031464641135439626
+Fraction of population infected at day 7 : 0.20913526558533263
+Fraction of population recovered at day 7 : 0.477329375550107
+Fraction of population susceptible to infection at day 8 : -0.030148567919358157
+Fraction of population infected at day 8 : 0.19317972377827788
+Fraction of population recovered at day 8 : 0.4919688441410803
+Fraction of population susceptible to infection at day 9 : -0.028983749514763704
+Fraction of population infected at day 9 : 0.17849232470920398
+Fraction of population recovered at day 9 : 0.5054914248055598
+Fraction of population susceptible to infection at day 10 : -0.027949074148827815
+Fraction of population infected at day 10 : 0.1649631866136238
+Fraction of population recovered at day 10 : 0.517985887535204
+Fraction of population susceptible to infection at day 11 : -0.027026960481929596
+Fraction of population infected at day 11 : 0.15249364988377193
+Fraction of population recovered at day 11 : 0.5295333105981577
+Fraction of population susceptible to infection at day 12 : -0.026202672512098815
+Fraction of population infected at day 12 : 0.1409948064220771
+Fraction of population recovered at day 12 : 0.5402078660900217
+Fraction of population susceptible to infection at day 13 : -0.025463784364381924
+Fraction of population infected at day 13 : 0.13038628182481482
+Fraction of population recovered at day 13 : 0.5500775025395671
+Fraction of population susceptible to infection at day 14 : -0.0247997587314898
+Fraction of population infected at day 14 : 0.12059521646418565
+Fraction of population recovered at day 14 : 0.5592045422673041
+Fraction of population susceptible to infection at day 15 : -0.024201612276993082
+Fraction of population infected at day 15 : 0.11155540485719594
+Fraction of population recovered at day 15 : 0.5676462074197971
+Fraction of population susceptible to infection at day 16 : -0.023661648145841714
+Fraction of population infected at day 16 : 0.10320656238604085
+Fraction of population recovered at day 16 : 0.5754550857598009
+Fraction of population susceptible to infection at day 17 : -0.02317324067273764
+Fraction of population infected at day 17 : 0.09549369554591391
+Fraction of population recovered at day 17 : 0.5826795451268237
+Fraction of population susceptible to infection at day 18 : -0.02273066099481472
+Fraction of population infected at day 18 : 0.08836655717977702
+Fraction of population recovered at day 18 : 0.5893641038150377
+Fraction of population susceptible to infection at day 19 : -0.022328934943908234
+Fraction of population infected at day 19 : 0.08177917212628615
+Fraction of population recovered at day 19 : 0.5955497628176221
+Fraction of population susceptible to infection at day 20 : -0.02196372658107333
+Fraction of population infected at day 20 : 0.07568942171461121
+Fraction of population recovered at day 20 : 0.601274304866462
+Fraction of population susceptible to infection at day 21 : -0.021631242228349477
+Fraction of population infected at day 21 : 0.07005867784186456
+Fraction of population recovered at day 21 : 0.6065725643864849
+Fraction of population susceptible to infection at day 22 : -0.021328150982230423
+Fraction of population infected at day 22 : 0.064851479146815
+Fraction of population recovered at day 22 : 0.6114766718354154
+Fraction of population susceptible to infection at day 23 : -0.021051518554497575
+Fraction of population infected at day 23 : 0.0600352431788051
+Fraction of population recovered at day 23 : 0.6160162753756925
+Fraction of population susceptible to infection at day 24 : -0.020798751947357096
+Fraction of population infected at day 24 : 0.05558000954914826
+Fraction of population recovered at day 24 : 0.6202187423982088
+Fraction of population susceptible to infection at day 25 : -0.020567552980988203
+Fraction of population infected at day 25 : 0.051458209914338984
+Fraction of population recovered at day 25 : 0.6241093430666492
+Fraction of population susceptible to infection at day 26 : -0.020355879089244206
+Fraction of population infected at day 26 : 0.04764446132859126
+Fraction of population recovered at day 26 : 0.627711417760653
+Fraction of population susceptible to infection at day 27 : -0.02016191011042881
+Fraction of population infected at day 27 : 0.04411538005677448
+Fraction of population recovered at day 27 : 0.6310465300536544
+Fraction of population susceptible to infection at day 28 : -0.01998402004499039
+Fraction of population infected at day 28 : 0.040849413387361845
+Fraction of population recovered at day 28 : 0.6341346066576287
+Fraction of population susceptible to infection at day 29 : -0.019820752945798565
+Fraction of population infected at day 29 : 0.03782668735105469
+Fraction of population recovered at day 29 : 0.636994065594744
+'''
