@@ -1,1 +1,9 @@
+https://www.kaggle.com/code/lisphilar/covid-19-data-with-sir-model/notebook
 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2358966/
+
+https://www.kaggle.com/code/dandelionz/spanishflu-dataset-analysis
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9507230/
+
+https://bbolker.github.io/math4mb/notes/epi1.pdf
