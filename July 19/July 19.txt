@@ -1,0 +1,14 @@
+COVID-19 data with SIR model
+https://www.kaggle.com/code/lisphilar/covid-19-data-with-sir-model/notebook
+
+Comparative estimation of the reproduction number for pandemic influenza from daily case notification data
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2358966/
+
+SpanishFlu dataset analysis
+https://www.kaggle.com/code/dandelionz/spanishflu-dataset-analysis
+
+Modelling the epidemic spread of an H1N1 influenza outbreak in a rural university town
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9507230/
+
+Epidemic models 1 (Ben Bolker)
+https://bbolker.github.io/math4mb/notes/epi1.pdf
